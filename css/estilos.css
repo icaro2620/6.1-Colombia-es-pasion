@@ -1,0 +1,73 @@
+/* La fuente se guarda en el proyecto para que también funcione sin Internet. */
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fuentes/Nunito.ttf') format('truetype');
+    font-weight: 200 1000;
+    font-display: swap;
+}
+/* Verde, crema y amarillo dan una sensación cálida sin recargar la página. */
+:root { --verde: #23483d; --crema: #fbf7ef; --amarillo: #f4c64f; }
+body { background: var(--crema); color: #263c33; font-family: Nunito, Arial, sans-serif; line-height: 1.7; }
+h1, h2, h3, .navbar-brand { font-family: Nunito, Arial, sans-serif; }
+h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.1; letter-spacing: -2px; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; }
+h3 { font-size: 1.5rem; }
+.navbar { padding: 22px 0; }
+.navbar-brand { font-size: 1.6rem; color: var(--verde); }
+.navbar-brand span { display: block; font: 700 10px Nunito, Arial, sans-serif; letter-spacing: 3px; }
+.nav-link { margin-left: 22px; color: var(--verde); }
+/* La capa oscura deja leer el texto sobre la fotografía. */
+.portada { background: linear-gradient(90deg, rgba(12,35,30,.85), rgba(12,35,30,.2)), url('../imagenes/cartagena.jpg') center/cover; padding: 110px 0; color: white; }
+.portada > .container > p:not(.etiqueta) { margin: 25px 0; font-size: 1.1rem; }
+.etiqueta { font-size: .7rem; letter-spacing: 2px; font-weight: bold; margin-bottom: 22px; }
+.portada .etiqueta { color: var(--amarillo); }
+.btn-viaje { background: var(--amarillo); color: #263c33; padding: 12px 20px; border: 1px solid var(--amarillo); border-radius: 999px; font-weight: bold; }
+.btn-viaje:hover { background: #e4b329; color: #263c33; }
+.franja { background: var(--verde); color: white; padding: 17px 0; font-size: .85rem; letter-spacing: 1px; }
+.seccion { padding-top: 70px; padding-bottom: 70px; }
+.fondo { background: #e9ede3; }
+/* El padding separa el texto del borde. Bootstrap usa border-box para medir las cajas. */
+.caja, .card { background: white; border: 1px solid #d3dace; padding: 28px; border-radius: 22px; }
+.card .numero { color: #8a6317; font-size: 2.5rem; font-family: Nunito, Arial, sans-serif; }
+.card .card-body { padding: 0; }
+.nota { font-size: .85rem; color: #566457; }
+/* Un ID permite dar estilo a este resultado sin cambiar los demás párrafos. */
+#resultadoViaje { border-top: 1px solid #d3dace; padding-top: 20px; }
+#resultadoViaje:empty { display: none; }
+.salida { padding: 26px; background: #213e34; color: #f8edcf; border-radius: 22px; font-size: .85rem; white-space: pre-wrap; overflow-wrap: anywhere; min-height: 210px; }
+.pie { background: var(--verde); color: white; padding: 32px 0; }
+.pie a { color: #ffe4a0; }
+.pie p:last-child { margin-bottom: 0; }
+.salto { position: absolute; top: -100px; left: 12px; z-index: 1100; background: white; padding: 10px; }
+.salto:focus { top: 12px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #ac6800; outline-offset: 4px; }
+@media (max-width: 767px) { .portada { padding: 65px 0; } .seccion { padding-top: 45px; padding-bottom: 45px; } .nav-link { margin-left: 0; } .caja { padding: 22px; } h1 { letter-spacing: -1px; } }
+
+/* Las esquinas suaves y los espacios amplios dejan respirar el contenido. */
+h1, h2, h3 { font-weight: 800; }
+h1 { max-width: 1000px; letter-spacing: -2.5px; }
+.navbar { padding: 24px 0; background: #fbf7ef; }
+.navbar-brand { font-weight: 900; }
+.navbar-brand span { margin-top: 6px; }
+.etiqueta { font-weight: 800; letter-spacing: 1.8px; }
+.portada { padding: 120px 0; border-radius: 0 0 38px 38px; }
+.portada .btn { box-shadow: 0 8px 28px rgba(0,0,0,.13); }
+.franja { background: transparent; color: #23483d; text-align: center; padding: 25px 0 0; }
+.card { box-shadow: 0 10px 30px rgba(35,72,61,.045); border: 1px solid #dce1d5; padding: 32px; }
+.card .numero { font-weight: 800; font-size: 1rem; background: #edf1e6; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; }
+.card h3 { margin-top: 8px; }
+.card > p:not(.numero) { color: #526356; }
+.btn-guardar { border: 1px solid #b9c8b5; color: #23483d; border-radius: 999px; padding: 10px 16px; }
+.btn-guardar:hover { background: #edf1e6; border-color: #23483d; }
+.form-control, .form-select { border-radius: 12px; padding: 12px; }
+.fondo { background: #edf1e7; }
+.panel-consejos { border-radius: 26px; background: #23483d; color: #fbf7ef; padding: 38px; }
+.panel-consejos .etiqueta { color: #f4c64f; }
+.panel-consejos .btn { border-color: #d8dfcf; color: #fbf7ef; border-radius: 999px; }
+.panel-consejos .btn:hover { color: #23483d; background: #fbf7ef; }
+.lista-consejos { padding-left: 22px; margin: 25px 0; }
+.lista-consejos li { margin-bottom: 14px; padding-left: 7px; }
+.favoritos { background: #f0e8d8; border-radius: 22px; padding: 32px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 35px; align-items: center; }
+.favoritos h3 { font-size: 1.45rem; }
+.favoritos .btn { border-radius: 999px; }
+@media (max-width: 767px) { .portada { padding: 70px 0; border-radius: 0 0 24px 24px; } .panel-consejos { padding: 27px; } .favoritos { grid-template-columns: 1fr; padding: 25px; gap: 20px; } .navbar-brand { font-size: 1.35rem; } h1 { letter-spacing: -1.3px; } }

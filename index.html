@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- HTML5 organiza las partes de la página; lang indica el idioma del contenido. -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Esta medida permite que Bootstrap adapte la página al celular. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colombia es pasión | Viaja a Colombia</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="bootstrap/bootstrap.bundle.min.js" defer></script>
+    <!-- El ejercicio de JavaScript está en su propio archivo, como pide el laboratorio. -->
+    <script src="js/viaje.js" defer></script>
+</head>
+<body>
+    <a class="salto" href="#contenido">Saltar al contenido</a>
+    <header><nav class="navbar navbar-expand-lg"><div class="container"><a class="navbar-brand" href="index.html">Colombia es pasión<span>VIAJA A COLOMBIA</span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button><div id="menu" class="collapse navbar-collapse"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li><li class="nav-item"><a class="nav-link" href="#plan">Tu viaje</a></li><li class="nav-item"><a class="nav-link" href="#inspiracion">Antes de salir</a></li></ul></div></div></nav></header>
+    <main id="contenido">
+        <section class="portada"><div class="container"><p class="etiqueta">UN PAÍS, MUCHAS FORMAS DE SENTIRLO</p><h1>Colombia se vive<br>con los cinco sentidos.</h1><p>El mar, las montañas y una conversación que se alarga.<br>Elige por dónde quieres empezar.</p><a class="btn btn-viaje" href="#plan">Imagina tu próximo viaje →</a></div></section>
+        <div class="franja"><div class="container">Caribe · Ciudades · Paisajes verdes</div></div>
+        <section id="destinos" class="container seccion"><p class="etiqueta">POR DÓNDE EMPEZAR</p><h2>Un destino para cada ánimo.</h2><div class="row g-4 mt-3" id="tarjetasDestinos"></div><noscript><p>Activa JavaScript para descubrir los destinos y preparar tu idea de viaje.</p></noscript></section>
+        <section id="plan" class="fondo"><div class="container seccion"><div class="row g-5"><div class="col-lg-5"><p class="etiqueta">TU VIAJE, A TU RITMO</p><h2>Vamos a armar<br>una primera idea.</h2><p>Elige qué te gustaría conocer y cuántos días tienes. Te proponemos un destino y un ritmo para empezar a imaginar tu recorrido. Tú eliges los detalles.</p><p class="nota">Simulador con valores de ejemplo en pesos colombianos. No realiza reservas.</p></div><div class="col-lg-7"><form id="formularioViaje" class="caja"><div class="row g-3"><div class="col-md-7"><label for="interes" class="form-label">¿Qué te llama la atención?</label><select id="interes" class="form-select"><option value="mar">Mar y paseos</option><option value="ciudad">Ciudad y cultura</option><option value="naturaleza">Naturaleza y café</option></select></div><div class="col-md-5"><label for="dias" class="form-label">Días disponibles</label><input id="dias" class="form-control" type="number" min="1" max="14" step="1" value="3" required></div></div><button type="submit" class="btn btn-viaje mt-4">Preparar mi idea</button><div id="resultadoViaje" class="mt-4" role="status" aria-live="polite"></div></form></div></div></div></section>
+        <!-- Los consejos se recorren con un bucle. Los favoritos usan una clausura. -->
+        <section id="inspiracion" class="container seccion">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5"><p class="etiqueta">LOS MEJORES VIAJES EMPIEZAN CON UNA IDEA</p><h2>Ve despacio.<br>Descubre más.</h2><p>Deja espacio para una parada inesperada, una comida que no conocías y esas conversaciones que no estaban en el itinerario.</p><a class="btn btn-viaje" href="#plan">Encontrar mi destino →</a></div>
+                <div class="col-lg-7"><div class="panel-consejos"><p class="etiqueta">ANTES DE SALIR</p><h3>Pequeños detalles, un mejor viaje.</h3><ul id="listaConsejos" class="lista-consejos"></ul><button id="otroConsejo" class="btn btn-outline-dark">Un consejo más</button><p id="consejoExtra" class="mt-3 mb-0" role="status"></p></div></div>
+            </div>
+            <div class="favoritos mt-5"><div><p class="etiqueta mb-2">TU LISTA DE GANAS</p><h3>Guarda lo que te gustaría conocer.</h3><p class="mb-0">Elige un favorito en las tarjetas de destinos y vuelve a él mientras recorres la página.</p></div><div><p id="resultadoVisitas" class="mb-2" role="status">Todavía no has guardado destinos.</p><button id="reiniciarVisitas" class="btn btn-outline-dark">Limpiar mi lista</button></div></div>
+        </section>
+    </main>
+    <footer class="pie"><div class="container"><p>Colombia es pasión · Viaja a Colombia</p><p class="small">Fotografía de Cartagena: poirpom, <a href="https://commons.wikimedia.org/wiki/File:Cartagena_skyline,_Colombia.jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Recorte visual con CSS. Sitio de demostración.</p></div></footer>
+</body>
+</html>

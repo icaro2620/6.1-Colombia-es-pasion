@@ -1,0 +1,10 @@
+Fotografía: Cartagena skyline, Colombia, autor poirpom.
+https://commons.wikimedia.org/wiki/File:Cartagena_skyline,_Colombia.jpg
+Licencia CC BY 2.0: https://creativecommons.org/licenses/by/2.0/
+Imagen original conservada; el CSS hace un recorte visual.
+Bootstrap: https://getbootstrap.com/docs/5.3/
+Alcance: https://developer.mozilla.org/en-US/docs/Glossary/Scope
+Clausuras: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures
+
+Tipografía Nunito: Google Fonts, licencia SIL Open Font License.
+Se incluye la licencia en fuentes/LICENCIA.txt.
